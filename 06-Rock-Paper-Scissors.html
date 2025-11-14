@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Rock Paper Scissors</title>
+</head>
+<body>
+    <p>Rock Paper Scissors Game</p>
+    <button onclick="
+             selectRock('Rock');
+    ">Rock</button>
+    <button onclick="
+             selectPaper('Paper')
+    ">Paper</button>
+    <button onclick="
+            selectScissors('Scissors')
+    ">Scissors</button>
+   
+    <script>
+        function selectScissors(scissorsParameter){
+             let com2=computerMove();
+             let res2='';
+             if (scissorsParameter=='Scissors'){
+                if (com2=='Rock'){
+             res2='Lose';
+             }else if(com2=='Paper'){
+             res2='Win';
+             }else{
+             res2='Tie';
+             }alert(`You picked Scissors and Computer Picked ${com2} so match is ${res2}`)
+             }
+        }
+        function selectPaper(paperParameter){
+            let com1=computerMove();
+             let res1='';
+             if (paperParameter=='Paper'){
+                if (com1=='Rock'){
+             res1='Win';
+             }else if(com1=='Paper'){
+             res1='Tie';
+             }else{
+             res1='Lose';
+             }alert(`You picked Paper and Computer Picked ${com1} so match is ${res1}`)
+             }
+        }
+        function selectRock(rockParameter){
+            let com=computerMove();
+             let res='';
+             if (rockParameter == 'Rock'){
+                if (com=='Rock'){
+             res='Tie';
+             }else if(com=='Paper'){
+             res='Lose';
+             }else{
+             res='Win';
+             }alert(`You picked Rock and Computer Picked ${com} so match is ${res}`)
+             }
+        }
+        
+        function computerMove(){
+            var ran= Math.floor(Math.random()*3)
+             let com='';
+             if (ran==1){
+             com='Rock';
+             }else if(ran==2){
+             com='Paper'
+             }else{
+             com='Scissors'
+             }
+            return com
+        }
+
+    </script>
+    
+</body>
+</html>
