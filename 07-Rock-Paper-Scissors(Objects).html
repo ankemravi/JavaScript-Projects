@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Rock Paper Scissors</title>
+</head>
+<body>
+    <p>Rock Paper Scissors Game</p>
+    <button onclick="
+             selectOption('Rock');
+    ">Rock</button>
+    <button onclick="
+             selectOption('Paper')
+    ">Paper</button>
+    <button onclick="
+            selectOption('Scissors')
+    ">Scissors</button>
+    <button onclick="
+    obj.Wins=0,
+    obj.Losses=0,
+    obj.Ties=0
+    alert(`Wins: ${obj.Wins},Losses: ${obj.Losses},Ties: ${obj.Ties}`)
+    localStorage.removeItem('score');
+    ">Reset Score</button>
+   
+    <script>
+        let obj=JSON.parse(localStorage.getItem('score')) || 
+        {
+        Wins:0,
+        Losses:0,
+        Ties:0
+        }
+        function selectOption(selectParameter){
+             let com=computerMove();
+             let res='';
+             if (selectParameter=='Scissors'){
+                if (com=='Rock'){
+             res='Lose';
+             }else if(com=='Paper'){
+             res='Win';
+             }else{
+             res='Tie';
+             }
+            }else if (selectParameter=='Paper'){
+                if (com=='Rock'){
+             res='Win';
+             }else if(com=='Paper'){
+             res='Tie';
+             }else{
+             res='Lose';
+             }
+            }else if (selectParameter == 'Rock'){
+                if (com=='Rock'){
+             res='Tie';
+             }else if(com=='Paper'){
+             res='Lose';
+             }else{
+             res='Win';
+             }
+            }
+             if (res=='Win'){
+             obj.Wins+=1;
+             }else if(res=='Lose'){
+                obj.Losses+=1;
+             }else{
+                obj.Ties+=1;
+             }
+
+             localStorage.setItem("score",JSON.stringify(obj));
+
+
+             alert(`You picked ${selectParameter} and Computer Picked ${com} so match is ${res}.
+Wins: ${obj.Wins},Losses: ${obj.Losses},Ties: ${obj.Ties}`)
+             }
+
+        function computerMove(){
+            var ran= Math.floor(Math.random()*3)
+             let com='';
+             if (ran==1){
+             com='Rock';
+             }else if(ran==2){
+             com='Paper'
+             }else{
+             com='Scissors'
+             }
+            return com
+        }
+
+    </script>
+    
+</body>
+</html>
