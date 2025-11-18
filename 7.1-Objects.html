@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Objects in Detail</title>
+</head>
+<body>
+    <script>
+        const student={
+            name:'Ravi',
+            roll_no:508,
+            section:'A',
+            marks:{
+                physics:88,
+                maths:95,
+                chemistry:67
+            },
+            fun(){
+                console.log('Function inside Object');
+            }
+        };
+        console.log(student.marks.chemistry);
+        student.fun();
+        console.log(typeof student);  //object
+        console.log(typeof student.fun)  //function
+        console.log(typeof console);  //object
+        console.log(typeof console.log);   //function
+        console.log(typeof Math)  //object
+        console.log(typeof Math.random)  //function  -->real time examples
+
+        const convert = JSON.stringify(student);
+        console.log(convert);
+        console.log(JSON.parse(convert));
+
+    </script>
+    
+</body>
+</html>
