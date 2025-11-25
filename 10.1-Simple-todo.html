@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Simple Todo</title>
+</head>
+<body>
+    <p>Tode List</p>
+    <input placeholder="Tode name" class="js-input" />
+    <button class="js-btn" onclick="add()">add</button>
+
+    <script>
+        const array = [];
+        function add(){
+            let inputElement = document.querySelector('.js-input');
+        array.push(inputElement.value)
+        console.log(array)
+        inputElement.value="";
+
+        }
+        
+    </script>
+    
+</body>
+</html>
