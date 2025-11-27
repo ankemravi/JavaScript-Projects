@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Simple Todo</title>
+</head>
+<body>
+    <p>Tode List</p>
+    <input placeholder="Tode name" class="js-input" />
+    <button class="js-btn" onclick="add()">add</button>
+    <p class="js-div"></p>
+
+    <script>
+        const array1 = ['html','css'];
+        todos();
+        
+        function todos(){
+            let todoElements='';
+             
+        for(let i=0;i<array1.length;i++){
+            const html = array1[i];
+            const item = `<p>${html}</p>`;
+            todoElements+=item;  
+        }
+
+          console.log(todoElements);
+        document.querySelector('.js-div').innerHTML=todoElements;
+        }
+
+        function add(){
+
+            let inputElement = document.querySelector('.js-input');
+            let words = inputElement.value.split(" ");
+            for(let i=0;i<words.length;i++){
+                if(words[i].trim()!==""){
+                    array1.push(words[i]);
+                }
+            }
+
+        todos();
+        inputElement.value="";
+        
+        }
+    </script>
+</body>
+</html>
