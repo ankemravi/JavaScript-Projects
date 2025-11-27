@@ -1,0 +1,78 @@
+
+    body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 40px;
+        background: #f4f6f9;
+    }
+
+    p {
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    .js-input, 
+    .js-date {
+        padding: 10px;
+        font-size: 16px;
+        margin: 5px;
+        border: 2px solid #ccc;
+        border-radius: 6px;
+        width: 200px;
+        outline: none;
+        transition: 0.2s;
+    }
+
+    .js-input:focus,
+    .js-date:focus {
+        border-color: #1a73e8;
+        box-shadow: 0 0 5px #1a73e855;
+    }
+
+    .js-btn {
+        padding: 10px 20px;
+        font-size: 16px;
+        background: #1a73e8;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: 0.2s;
+        margin-left: 5px;
+    }
+
+    .js-btn:hover {
+        background: #155ec2;
+    }
+
+    .todo-item {
+        background: white;
+        padding: 10px 15px;
+        margin-top: 10px;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        width: 350px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 18px;
+    }
+
+    .delete-btn {
+        padding: 5px 10px;
+        font-size: 14px;
+        background: #d9534f;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: 0.2s;
+    }
+
+    .delete-btn:hover {
+        background: #b3413d;
+    }
+

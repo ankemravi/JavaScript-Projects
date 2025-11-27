@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Simple Todo</title>
+    <link rel="stylesheet" href="13-Final-todo.css">
+
+</head>
+<body>
+    <p>Tode List</p>
+    <input placeholder="Tode name" class="js-input" />
+    <input type="date" class="js-date"/>
+    <button class="js-btn" onclick="add()">add</button>
+    <p class="js-div"></p>
+
+    <script>
+        const array1 = [{
+            name:'html',
+            duedate:'12-11-2-25'
+        },
+        {
+            name:'css',
+            duedate:'11-11-2021'
+        }
+        ];
+        todos();
+        
+        function todos(){
+            let todoElements='';
+             
+        for(let i=0;i<array1.length;i++){
+            const html = array1[i];
+
+        //    let name = array1.name;
+        //    let duedate = array1.duedate;
+
+
+
+            let {name,duedate} = array1[i];   //Destructuring
+            const item = `
+    <div class="todo-item">
+        <span>${name} — ${duedate}</span>
+        <button class="delete-btn" onclick="
+            array1.splice(${i},1);
+            todos();
+        ">Delete</button>
+    </div>
+        `;
+
+            todoElements+=item;
+          
+            
+        }
+          console.log(todoElements);
+        document.querySelector('.js-div').innerHTML=todoElements;
+
+        }
+ 
+        function add(){
+
+            let inputElement = document.querySelector('.js-input');
+            let dateElement = document.querySelector('.js-date');
+            let duedateValue = dateElement.value;
+            let words = inputElement.value.split(" ");
+            for(let i=0;i<words.length;i++){
+                if(words[i].trim()!==""){
+                    array1.push({name:words[i],duedate:duedateValue});
+
+                }
+            }
+        todos();
+        inputElement.value="";
+
+        }
+        
+    </script>
+    
+</body>
+</html>
