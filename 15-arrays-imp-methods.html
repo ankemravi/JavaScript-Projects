@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Arrays Ikmportant Methods</title>
+</head>
+<body>
+    <script>
+
+        // for loop
+
+        /*
+        const array = [1,2,3,4,5];
+        for (let i=0;i<array.length;i++){
+            console.log(array[i]);
+        }
+            */ 
+
+         //forEach 
+
+        /*
+         const array = [1,2,3,4,5];  
+         array.forEach(iterator);        
+
+         function iterator(i){
+            console.log(i);
+         }
+            */ 
+
+            /*
+            const array = [1,2,3,4,5];
+            array.forEach(function(i){
+                console.log(i);
+            });
+            */ 
+
+
+        // map    -->It creates new array and perforn operatins on the existing array
+
+        /*
+        const array = [1,2,3,4,5];  
+        const k = array.map(function(i){
+            return i*10;
+        })
+        console.log(k)
+        */ 
+
+
+        //filter        -->It creates new array and perform operation(only conditions) on the existing array 
+
+/*
+        const array = [1,2,3,4,5,6,7,8,9,10];
+        const array2=[];
+        array.filter(function(num){
+            if (num%3==0){
+                array2.push(num)
+            };
+        })
+        console.log(array2)
+        */
+
+
+        //reduce           ->It does not create new array and it returns only one value   
+
+        /*
+        const array = [1,2,3,4,5];         
+        const k = array.reduce(function(sum,i){           //(accumulate,iterator)
+            return sum+=i
+        })
+        console.log(k);
+        */ 
+
+        const run = function(){
+            console.log("Hello");
+            return 5;
+        }
+        console.log(run());
+
+
+
+
+
+
+    </script>
+    
+</body>
+</html>
