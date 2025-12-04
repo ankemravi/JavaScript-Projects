@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Arrow Functions</title>
+</head>
+<body>
+    <button class="btn">click</button>
+
+    <script>
+        
+        const buttonElement = document.querySelector('.btn');
+
+        const arrow1 = () =>{
+            console.log("Button is clicked");
+        } 
+
+        buttonElement.addEventListener("click",arrow1);
+
+        const arrow2 = () =>{
+        console.log("Button is again clicked");
+        }
+
+        buttonElement.addEventListener("click",arrow2);
+
+        buttonElement.removeEventListener("click",arrow2);
+
+
+
+
+
+
+        /*
+        function fun(){
+            console.log("Hello")
+        }
+        fun();
+
+        const arrow= ()=>{
+            console.log("Arrow Functin")
+        }
+        arrow();
+        */ 
+        /*
+        const fun=(a,b)=>{
+            return a+b;
+        }
+        console.log(fun(5,5));
+        */ 
+
+        // Single line function
+        /*
+        const fun = () => console.log("Hello");
+        const fun2 = () => 5+5;
+        fun();
+        console.log(fun2());
+        */ 
+/*
+        const obj={
+            name:"Ravi",
+            fun:function(){
+                console.log("Hello");
+            },
+            arrow:()=>{
+                console.log("Arrow");
+            },
+            fun2(){                        //Create function in object without function keyword
+                console.log("Hi");
+            }
+        }
+        console.log(obj.name);
+        obj.fun();
+        obj.arrow();
+        obj.fun2();
+        */
+    /*
+        setInterval(()=>{
+            console.log("Hi")},3000);
+            */ 
+
+            
+
+
+
+
+
+    </script>
+    
+</body>
+</html>
