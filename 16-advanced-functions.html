@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Advanced Functins in JavaScript</title>
+</head>
+<body>
+<script>
+    /*
+    1.Functin Creation
+    2.function with parameters
+    3.function with return 
+    4.functin with return + parameters
+    5.function Hoisting Behaviour
+    6.function inside object 
+    7.Anonymous function 
+    8.callback function 
+    9.setTimeout,setInterval functins 
+*/ 
+
+ //function creation
+
+/*
+ function fun(){
+    console.log("Hello");
+ }
+ fun();
+ */
+
+ //function with parameters
+
+/*
+ function fun(a,b=10){
+    console.log(a+b);
+ }
+ fun(5,6);
+ fun(2);
+ */ 
+
+
+ //function with return statement
+
+ /*
+ function fun(){
+    console.log("Hello");
+    return 5;
+ }
+ fun();                  // It returns only Hello
+ console.log(fun());      // It returns both Hello and return statement
+ */
+
+
+ //function with return + parameters
+
+/*
+ function fun(a,b=10){
+    return a+b;
+ }
+ console.log(fun(5,5));
+ console.log(fun(5));
+ */ 
+
+
+ //Function Hoisting Behaviour
+
+ /*
+ fun();
+ function fun(){
+    console.log("Hello");
+ }
+*/ 
+
+
+//Function inside object 
+
+/*
+  const  obj={
+    name:"Ravi",
+    fun:function(){
+        console.log("Good Morning");
+    }
+    }
+    console.log(obj.name);
+    obj.fun();
+    */
+
+
+    //Anonymous function
+
+    /*
+    const fun = function(){
+        console.log("Hello");
+    }
+    console.log(fun());
+    */ 
+
+
+    //callback function
+
+    /*
+    function fun1(num){
+        num();                  //call the parameter name not functin name
+    }
+    fun1(function fun2(){
+        console.log("This is fun2 function");
+    });
+    */ 
+
+
+    //setTimeout built-in function
+
+    /*     Enter 2 arguments(statement,time(1000=1sec))
+
+    setTimeout(function(){
+        console.log("It is setTimeout in-built function");
+    },3000);
+    */
+
+//setIntervel built-in function
+
+// Enter 2 arguments(statement,time(1000=1sec))    
+// so the difference is after time-out both are execute but this execute every time-oue interval
+/*
+    setInterval(function(){
+        console.log("This is setInterval built-in fuunctin")
+    },3000);
+    */ 
+
+
+
+
+
+
+
+</script>
+    
+    
+</body>
+</html>
